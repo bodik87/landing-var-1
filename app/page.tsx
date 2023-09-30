@@ -1,8 +1,8 @@
 import Section from "@/components/Section";
 import { Carousel_full } from "@/components/carousels/Carousel_full";
 import { Carousel_half } from "@/components/carousels/Carousel_half";
-import Article_1 from "@/components/content/Article_1";
-import Article_2 from "@/components/content/Article_2";
+import Article from "@/components/content/Article";
+import ImageSection from "@/components/content/ImageSection";
 import { mainSliderSlides, secondarySliderSlides } from "@/data";
 
 export default function Home() {
@@ -10,11 +10,11 @@ export default function Home() {
     <>
       <Carousel_full slides={mainSliderSlides} />
 
-      <Article_2 />
+      <ImageSection />
 
 
       <Section>
-        <Article_1 />
+        <Article />
       </Section >
 
       <Carousel_half slides={secondarySliderSlides} />

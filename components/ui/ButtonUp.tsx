@@ -29,7 +29,7 @@ export default function ButtonUp() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 20, opacity: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            className="w-12 h-12 fixed bottom-4 right-4 z-10 flex items-center justify-center bg-white/10 border-2 border-gray-300/50 rounded-full backdrop-blur-md"
+            className="w-12 h-12 fixed bottom-6 right-4 z-10 flex items-center justify-center bg-white/10 border-2 border-gray-300/50 rounded-full backdrop-blur-md"
             onClick={scrollToTop}
           >
             <UpArrowIcon />

@@ -38,7 +38,7 @@ export const Carousel_full = ({ slides }: Props) => {
       >
         {slides.map(item =>
           <SwiperSlide key={item.id}>
-            <Link href={`/promo/${item.id}`}>
+            <Link href={`#`}>
               <Image
                 src={item.slideImage}
                 alt={item.title}

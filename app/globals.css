@@ -19,10 +19,11 @@ body {
     @apply font-semibold text-[min(10vw,64px)];
   }
   h3 {
-    @apply font-medium;
+    @apply text-[min(6vw,32px)] font-medium;
   }
   p {
-    @apply text-[min(4vw,20px)];
+    text-wrap: balance;
+    @apply text-[min(4vw,20px)] font-medium;
   }
 }
 
@@ -42,7 +43,7 @@ body {
 }
 
 .scroll_horisontal::-webkit-scrollbar {
-  @apply h-2;
+  @apply h-2 sm:h-4;
 }
 
 .scroll_horisontal::-webkit-scrollbar-track {
@@ -59,4 +60,8 @@ body {
 
 .swiper-pagination-horizontal {
   bottom: 0 !important;
+}
+
+.text-accent {
+  @apply dark:text-white text-app-black;
 }

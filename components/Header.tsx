@@ -32,7 +32,7 @@ const Header = () => {
         <section className="wrapper flex justify-between items-center text-[min(4vw,20px)]">
           <Link href="/">Назва</Link>
 
-          <nav className="space-x-3 flex items-center">
+          <nav className="space-x-3 md:space-x-5 flex items-center">
             <a href="tel:+380660984114">
               <span className="hidden sm:block">Зателефонувати</span>
               <span className="sm:hidden"><PhoneIcon /></span>
