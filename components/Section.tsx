@@ -60,14 +60,14 @@ export default function Section({ children, text = "Додатково", maxWidt
   return (
     <section
       ref={ref}
-      className="min-h-screen relative flex justify-center items-center"
+      className="relative flex justify-center items-center"
     >
       <Modal modal={modal} setModal={setModal}>
         Hello
       </Modal>
 
       {children}
-      <div className="absolute h-full py-5 flex items-end z-30">
+      <div className="absolute h-full py-10 flex items-end z-30">
         <AnimatePresence initial={false}>
           {isInView && (
             <>
@@ -100,7 +100,7 @@ export default function Section({ children, text = "Додатково", maxWidt
                     duration: 0.5,
                   },
                 }}
-                className="h-14 w-auto rounded-full bg-black/10 dark:bg-white/10 backdrop-blur-xl sticky bottom-3 shadow-xl cursor-pointer overflow-hidden z-50"
+                className="h-14 w-auto rounded-full bg-black/10 dark:bg-white/10 backdrop-blur-xl sticky bottom-3 cursor-pointer overflow-hidden z-50"
               >
                 <motion.span
                   id="text"

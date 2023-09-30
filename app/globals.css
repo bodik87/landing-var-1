@@ -16,10 +16,13 @@ body {
     @apply font-medium text-3xl;
   }
   h2 {
-    @apply font-semibold text-xl;
+    @apply font-semibold text-[min(10vw,64px)];
   }
   h3 {
     @apply font-medium;
+  }
+  p {
+    @apply text-[min(4vw,20px)];
   }
 }
 

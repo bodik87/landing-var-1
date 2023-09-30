@@ -8,9 +8,18 @@ export default function Home() {
     <>
       <Carousel_full slides={mainSliderSlides} />
       <Carousel_half slides={secondarySliderSlides} />
-      <Section>Hello</Section>
+      <Section>
+        <article className="wrapper">
+          <div className="min-h-[500px] h-full p-5 bg-black/10 dark:bg-[#313131]">
+            <h2>
+              <span className="opacity-40">23.</span>
+              Hello
+            </h2>
 
-      <div className="min-h-screen"></div>
+            <p>Content</p>
+          </div>
+        </article >
+      </Section >
     </>
   )
 }
