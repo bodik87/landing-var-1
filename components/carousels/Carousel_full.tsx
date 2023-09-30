@@ -54,7 +54,7 @@ export const Carousel_full = ({ slides }: Props) => {
 
       <button
         onClick={() => swiperRef.current?.slidePrev()}
-        className="idden sm:flex absolute top-1/2 -translate-y-1/2 left-10 w-9 h-9 rounded-full overflow-hidden bg-white/20 z-10 items-center justify-center hover:scale-105 transition-all rotate-180"
+        className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-10 w-9 h-9 rounded-full overflow-hidden bg-white/20 z-10 items-center justify-center hover:scale-105 transition-all rotate-180"
       >
         <Arrow />
       </button>

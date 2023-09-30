@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Carousel_full slides={mainSliderSlides} />
       <Carousel_half slides={secondarySliderSlides} />
-      <Section>Hellp</Section>
+      <Section>Hello</Section>
 
       <div className="min-h-screen"></div>
     </>

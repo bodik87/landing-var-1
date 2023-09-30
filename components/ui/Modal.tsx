@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -22,7 +21,7 @@ const Modal = ({ children, modal, setModal }: Props) => {
       className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-xl z-50"
      >
       <div className="max-w-7xl mx-auto">
-       <div className="p-5 max-w-[260px] w-full max-h-[500px] bg-white rounded-xl overflow-hidden shadow-2xl z-30">
+       <div className="p-5 max-w-[260px] w-full max-h-[500px] bg-white dark:bg-white/20 rounded-xl overflow-hidden shadow-2xl z-30">
         <div className="flex flex-col max-h-[500px] overflow-y-auto scroll_categories">
          {children}
         </div>
