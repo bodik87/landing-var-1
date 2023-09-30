@@ -12,7 +12,7 @@
     @apply font-medium text-3xl;
   }
   h2 {
-    @apply font-medium text-2xl;
+    @apply font-semibold text-xl;
   }
   h3 {
     @apply font-medium;

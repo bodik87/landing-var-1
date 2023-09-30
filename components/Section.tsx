@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, cubicBezier, motion, useInView } from "framer-motion";
-import Modal from "./Modal";
+import Modal from "./ui/Modal";
 
 const easing = cubicBezier(0.35, 0.17, 0.3, 1);
 

@@ -1,8 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import ButtonUp from '@/components/ButtonUp';
-import Hydration from '@/components/Hydration';
+import ButtonUp from '@/components/ui/ButtonUp';
+import Hydration from '@/components/ui/Hydration';
+import ProgressScroll from '@/components/ui/ProgressScroll';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Hydration>
           <ButtonUp />
+          <ProgressScroll />
           <Header />
           <main>
             {children}
