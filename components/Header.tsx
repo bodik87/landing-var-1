@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useMotionValueEvent, useScroll } from "framer-motion";
+import ThemeToggle from "./ui/ThemeToggle";
 
 const Header = () => {
  const [scrollUp, setScrollUp] = useState(true);
@@ -18,17 +19,18 @@ const Header = () => {
 
  return (
   <header
-   className={`bg-gray-300/50 border-b border-b-gray-50/50 backdrop-blur-xl sticky top-0 transition-all z-30 ${!scrollUp && "-translate-y-[110%]"}`}
+   className={`bg-gray-300/50 dark:bg-white/5 border-b border-b-gray-50/30 backdrop-blur-xl sticky top-0 transition-all z-30 ${!scrollUp && "-translate-y-[110%]"}`}
   >
    <section className="wrapper flex justify-between items-center text-[min(4vw,20px)]">
     <Link href="/">Назва</Link>
 
     <nav className="space-x-3 flex items-center">
      <a href="tel:+380660984114">
-      <span className="hidden sm:block">Зателефонуати</span>
+      <span className="hidden sm:block">Зателефонувати</span>
       <span className="sm:hidden"><PhoneIcon /></span>
      </a>
      <Link href={`/information`}>Інформація</Link>
+     <ThemeToggle />
     </nav>
    </section>
   </header>
