@@ -24,7 +24,7 @@ export const Carousel_half = ({ slides }: Props) => {
       <Swiper
         centeredSlides={true}
         spaceBetween={20}
-        slidesPerView={1.9}
+        slidesPerView={2}
         allowTouchMove={false}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;

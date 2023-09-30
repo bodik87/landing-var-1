@@ -16,7 +16,7 @@ const Article = () => {
      <motion.p
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ amount: 0.3 }}
+      viewport={{ amount: 1 }}
       transition={{
        duration: 0.4,
        stiffness: 100,
@@ -30,7 +30,7 @@ const Article = () => {
      <motion.p
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ amount: 0.3 }}
+      viewport={{ amount: 1 }}
       transition={{
        duration: 0.4,
        stiffness: 100,

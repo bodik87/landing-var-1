@@ -15,6 +15,6 @@ export const secondarySliderSlides = [
 ];
 export const imageSection = [
   { id: 1, title: "Img 1", image: "/images/imageSection/img_1.jpg" },
-  { id: 2, title: "Img 2", image: "/images/imageSection/img_1.jpg" },
+  { id: 2, title: "Img 2", image: "/images/imageSection/img_2.png" },
   { id: 3, title: "Img 3", image: "/images/imageSection/img_1.jpg" },
 ];
