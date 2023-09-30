@@ -26,7 +26,7 @@
   @apply bg-white mb-1;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-600 rounded-md;
+  @apply bg-[#353535];
 }
 
 .wrapper {

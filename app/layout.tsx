@@ -24,7 +24,7 @@ export default function RootLayout({
         <Hydration>
           <ButtonUp />
           <Header />
-          <main className="wrapper">
+          <main>
             {children}
           </main>
           <Footer />

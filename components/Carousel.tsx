@@ -23,7 +23,7 @@ type Props = {
 export const Carousel = ({ slides }: Props) => {
   const swiperRef = useRef<SwiperCore>();
   return (
-    <section className="relative">
+    <section className="wrapper relative">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
@@ -54,13 +54,13 @@ export const Carousel = ({ slides }: Props) => {
 
       <button
         onClick={() => swiperRef.current?.slidePrev()}
-        className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-3 w-8 h-8 rounded-full bg-white/30 z-10 items-center justify-center hover:scale-105 transition-all"
+        className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-10 w-8 h-8 rounded-full bg-white/30 z-10 items-center justify-center hover:scale-105 transition-all"
       >
         <ArrowIcon />
       </button>
       <button
         onClick={() => swiperRef.current?.slideNext()}
-        className="hidden sm:flex absolute top-1/2 -translate-y-1/2 rotate-180 right-3 w-8 h-8 rounded-full bg-white/30 z-10 items-center justify-center hover:scale-105 transition-all"
+        className="hidden sm:flex absolute top-1/2 -translate-y-1/2 rotate-180 right-10 w-8 h-8 rounded-full bg-white/30 z-10 items-center justify-center hover:scale-105 transition-all"
       >
         <ArrowIcon />
       </button>
