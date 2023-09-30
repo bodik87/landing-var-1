@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function useTheme() {
-	const prevTheme = localStorage.getItem("theme");
+	const prevTheme = typeof window !== "undefined" ? localStorage.getItem("theme") : false;
 	const [theme, setTheme] = useState(() => {
 		if (prevTheme) {
 			return prevTheme;
