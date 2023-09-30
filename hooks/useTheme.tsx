@@ -1,19 +1,12 @@
-"use client"
 import { useState, useEffect } from "react";
 
 export default function useTheme() {
-
-	useEffect(() => {
-		console.log(localStorage.getItem('theme'));
-	}, [])
-
-	const prevTheme = localStorage.getItem("theme");
-
+	const prevTheme = typeof window !== 'undefined' && localStorage.getItem("theme");
 	const [theme, setTheme] = useState(() => {
 		if (prevTheme) {
 			return prevTheme;
 		}
-		return window.matchMedia("(prefers-color-scheme: dark)").matches
+		return typeof window !== 'undefined' && window.matchMedia("(prefers-color-scheme: dark)").matches
 			? "dark"
 			: "light";
 	});
@@ -27,15 +20,10 @@ export default function useTheme() {
 			root.classList.remove("dark");
 			root.classList.add("light");
 		}
-		localStorage.setItem("theme", theme);
+		typeof window !== 'undefined' && localStorage.setItem("theme", theme);
 	}, [theme]);
 
-	const toggleTheme = () => {
-		setTheme((prev) => (prev === "light" ? "dark" : "light"));
-	};
-	return {
-		theme,
-		toggleTheme,
-	};
+	const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"))
+	return { theme, toggleTheme };
 }
 
