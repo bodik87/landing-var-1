@@ -20,7 +20,7 @@ export const Carousel_half = ({ slides }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(1)
 
   return (
-    <section className="relative">
+    <section className="relative mb-5">
       <Swiper
         centeredSlides={true}
         spaceBetween={20}
