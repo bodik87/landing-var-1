@@ -3,6 +3,7 @@ import { Carousel_full } from "@/components/carousels/Carousel_full";
 import { Carousel_half } from "@/components/carousels/Carousel_half";
 import Article from "@/components/content/Article";
 import ImageSection from "@/components/content/ImageSection";
+import ZoomImage from "@/components/content/ZoomImage";
 import { mainSliderSlides, secondarySliderSlides } from "@/data";
 
 export default function Home() {
@@ -18,6 +19,8 @@ export default function Home() {
       </Section >
 
       <Carousel_half slides={secondarySliderSlides} />
+      <ZoomImage />
+      <div className="min-h-screen"></div>
     </>
   )
 }
