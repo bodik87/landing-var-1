@@ -1,5 +1,5 @@
 "use client"
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 import React, { useRef } from 'react'
 
