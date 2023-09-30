@@ -20,7 +20,6 @@ export default function Home() {
 
       <Carousel_half slides={secondarySliderSlides} />
       <ZoomImage />
-      <div className="min-h-screen"></div>
     </>
   )
 }
