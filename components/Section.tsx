@@ -100,7 +100,7 @@ export default function Section({ children, text = "Додатково", maxWidt
                     duration: 0.5,
                   },
                 }}
-                className="h-14 w-auto rounded-full bg-black/10 backdrop-blur-xl sticky bottom-3 shadow-xl cursor-pointer overflow-hidden z-50"
+                className="h-14 w-auto rounded-full bg-black/10 dark:bg-white/10 backdrop-blur-xl sticky bottom-3 shadow-xl cursor-pointer overflow-hidden z-50"
               >
                 <motion.span
                   id="text"

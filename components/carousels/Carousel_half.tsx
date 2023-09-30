@@ -37,7 +37,7 @@ export const Carousel_half = ({ slides }: Props) => {
               alt={item.title}
               width={1280}
               height={512}
-              className={`object-cover rounded-lg ${currentIndex - 1 === i ? "opacity-100" : "opacity-50"} transition-all`}
+              className={`object-cover rounded-lg ${currentIndex - 1 === i ? "opacity-100" : "opacity-30"} transition-all`}
               priority
               quality={100}
             />
