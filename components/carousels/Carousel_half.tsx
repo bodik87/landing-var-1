@@ -1,12 +1,9 @@
 "use client";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from 'swiper/types';
 import "swiper/css";
-import "swiper/css/autoplay";
 
 type Slide = {
   id: number,
@@ -28,7 +25,7 @@ export const Carousel_half = ({ slides }: Props) => {
         centeredSlides={true}
         spaceBetween={20}
         slidesPerView={1.9}
-
+        allowTouchMove={false}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -40,7 +37,7 @@ export const Carousel_half = ({ slides }: Props) => {
               alt={item.title}
               width={1280}
               height={512}
-              className="object-cover rounded-lg"
+              className={`object-cover rounded-lg ${currentIndex - 1 === i ? "opacity-100" : "opacity-50"} transition-all`}
               priority
               quality={100}
             />
