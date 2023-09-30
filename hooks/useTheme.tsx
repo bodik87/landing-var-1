@@ -2,7 +2,12 @@
 import { useState, useEffect } from "react";
 
 export default function useTheme() {
-	const prevTheme = typeof window !== "undefined" && localStorage.getItem("theme");
+
+	useEffect(() => {
+		console.log(localStorage.getItem('theme'));
+	}, [])
+
+	const prevTheme = localStorage.getItem("theme");
 
 	const [theme, setTheme] = useState(() => {
 		if (prevTheme) {
@@ -22,7 +27,7 @@ export default function useTheme() {
 			root.classList.remove("dark");
 			root.classList.add("light");
 		}
-		typeof window !== "undefined" && localStorage.setItem("theme", theme);
+		localStorage.setItem("theme", theme);
 	}, [theme]);
 
 	const toggleTheme = () => {
