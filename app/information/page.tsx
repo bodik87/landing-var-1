@@ -2,7 +2,9 @@ import React from 'react'
 
 const Information = () => {
  return (
-  <div>Information</div>
+  <div className='wrapper'>
+   Контент сторінки
+  </div>
  )
 }
 
