@@ -30,33 +30,30 @@ const Header = () => {
         className={`bg-gray-300/50 dark:bg-white/5 border-b border-b-gray-50/30 backdrop-blur-xl sticky top-0 transition-all z-30 ${!scrollUp && "-translate-y-[110%]"}`}
       >
         <section className="wrapper flex justify-between items-center text-[min(4vw,20px)]">
-          <Link href="/">Назва</Link>
+          <Link href="/" className="inline-flex gap-2 items-center"><Logo /> Назва</Link>
 
-          <nav className="space-x-3 md:space-x-5 flex items-center">
+          <nav className="space-x-4 md:space-x-6 flex items-center">
             <a href="tel:+380660984114">
-              <span className="hidden sm:block">Зателефонувати</span>
+              <span className="hidden sm:block">Телефон</span>
               <span className="sm:hidden"><PhoneIcon /></span>
             </a>
-            <Link href={`/information`}>Інформація</Link>
+            <Link href={`/information`}>Інфо</Link>
 
             <ThemeToggle />
             <button
               onClick={() => setActive(!active)}
-              className="lg:hidden z-50"
+              className="md:hidden z-50"
             >
               <Burger />
             </button>
           </nav>
         </section>
-
-
-
       </header>
 
       {active && (
         <div
           onClick={() => setActive(false)}
-          className="md:hidden bg-white dark:bg-app-black fixed inset-0 z-40">
+          className="md:hidden bg-white dark:bg-black fixed inset-0 z-40">
           <button
             onClick={() => setActive(!active)}
             className="w-9 h-9 p-2 fixed top-5 right-6 rounded-full overflow-hidden bg-black/20 dark:bg-white/20 items-center justify-center"
@@ -96,8 +93,8 @@ function PhoneIcon({ active = false }) {
       fill="none">
       <path
         className={`${active
-          ? "stroke-app-black dark:stroke-white"
-          : "stroke-app-black dark:stroke-white"
+          ? "stroke-black dark:stroke-white"
+          : "stroke-black dark:stroke-white"
           }`}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -119,8 +116,8 @@ function Burger({ active = false }) {
       <path
         d="M4 6H20M4 12H20M4 18H20"
         className={`${active
-          ? "stroke-app-black dark:stroke-white"
-          : "stroke-app-black dark:stroke-white"
+          ? "stroke-black dark:stroke-white"
+          : "stroke-black dark:stroke-white"
           }`}
         strokeWidth="2"
         strokeLinecap="round"
@@ -136,12 +133,28 @@ function Close({ active = false }) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       className={`${active
-        ? "fill-app-black dark:fill-white"
-        : "fill-app-black dark:fill-white"
+        ? "fill-black dark:fill-white"
+        : "fill-black dark:fill-white"
         }`}
     >
       <path
 
         d="m12.12 10 4.07-4.06a1.5 1.5 0 1 0-2.11-2.12L10 7.88 5.94 3.81a1.5 1.5 0 1 0-2.12 2.12L7.88 10l-4.07 4.06a1.5 1.5 0 0 0 0 2.12 1.51 1.51 0 0 0 2.13 0L10 12.12l4.06 4.07a1.45 1.45 0 0 0 1.06.44 1.5 1.5 0 0 0 1.06-2.56Z" /></svg>
+  );
+}
+
+function Logo({ active = false }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+      <path
+        className={`${active
+          ? "stroke-black dark:stroke-white"
+          : "stroke-black dark:stroke-white"
+          }`}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M8 15s1.6 2 4 2 4-2 4-2m-13-.4v-2.47c0-1.149 0-1.723.148-2.252a4 4 0 0 1 .636-1.3c.327-.442.78-.795 1.687-1.5l2.6-2.022c1.405-1.093 2.108-1.64 2.884-1.85a4 4 0 0 1 2.09 0c.776.21 1.479.757 2.884 1.85l2.6 2.022c.907.705 1.36 1.058 1.687 1.5.29.39.505.832.636 1.3.148.529.148 1.103.148 2.252v2.47c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6Z" />
+    </svg>
   );
 }

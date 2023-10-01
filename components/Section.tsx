@@ -51,7 +51,7 @@ export default function Section({ children, text = "Додатково", maxWidt
       className="relative flex justify-center items-center"
     >
       <Modal modal={modal} setModal={setModal}>
-        Hello
+        <p className="mt-5">Контент модального вікна</p>
       </Modal>
 
       {children}

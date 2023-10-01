@@ -10,8 +10,8 @@ import Header from '@/components/Header';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Лендінг 1',
-  description: 'Лендінг 1',
+  title: 'Лендінг',
+  description: 'Лендінг',
 }
 
 export default function RootLayout({

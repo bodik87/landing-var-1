@@ -2,9 +2,9 @@ import React from 'react'
 
 const Information = () => {
  return (
-  <div className='wrapper'>
+  <section className='wrapper'>
    Контент сторінки
-  </div>
+  </section>
  )
 }
 

@@ -9,9 +9,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        "app-black": "#0D0F14",
-      },
       animation: {
         loading: "loading 2s linear infinite",
       },

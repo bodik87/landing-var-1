@@ -8,7 +8,7 @@
 }
 
 body {
-  @apply bg-white dark:bg-app-black text-app-black dark:text-white;
+  @apply bg-white dark:bg-black text-black dark:text-white;
 }
 
 @layer base {
@@ -63,5 +63,5 @@ body {
 }
 
 .text-accent {
-  @apply dark:text-white text-app-black;
+  @apply dark:text-white text-black;
 }

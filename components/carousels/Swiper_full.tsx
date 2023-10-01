@@ -20,7 +20,7 @@ type Props = {
   slides: Slide[]
 }
 
-export const Carousel_full = ({ slides }: Props) => {
+export const Swiper_full = ({ slides }: Props) => {
   const swiperRef = useRef<SwiperCore>();
   return (
     <section className="wrapper relative">

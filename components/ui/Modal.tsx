@@ -20,7 +20,7 @@ const Modal = ({ children, modal, setModal }: Props) => {
             onClick={() => setModal(false)}
             className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-3xl z-50"
           >
-            <div onClick={(e) => e.stopPropagation()} className="max-h-[500px] flex flex-col items-center overflow-y-auto scroll_categories p-5 max-w-[260px] w-full bg-white dark:bg-white/20 rounded-xl overflow-hidden shadow-2xl z-30">
+            <div onClick={(e) => e.stopPropagation()} className="max-h-[500px] flex flex-col items-center overflow-y-auto scroll_categories p-5 max-w-xs w-full bg-white dark:bg-white/20 rounded-xl overflow-hidden shadow-2xl z-30">
               <button
                 onClick={() => setModal(false)}
                 className="ml-auto w-9 h-9 p-2 rounded-full overflow-hidden bg-black/20 dark:bg-white/20 items-center justify-center"
@@ -44,8 +44,8 @@ function Close({ active = false }) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       className={`${active
-        ? "fill-app-black dark:fill-white"
-        : "fill-app-black dark:fill-white"
+        ? "fill-black dark:fill-white"
+        : "fill-black dark:fill-white"
         }`}
     >
       <path

@@ -8,16 +8,16 @@ const ImageSection = () => {
    <article className='wrapper'>
     <div className="">
      <h2 className="opacity-40">
-      Ваші фографії
+      Фото
      </h2>
-     <div className="w-full flex gap-5 overflow-x-scroll snap-x snap-mandatory rounded-[32px] scroll_horisontal pb-4">
+     <div className="mt-2 w-full flex gap-5 overflow-x-scroll snap-x snap-mandatory rounded-[32px] scroll_horisontal pb-4">
       {imageSection.map(item => (
        <Image
         key={item.id}
         src={item.image}
         alt={item.title}
         width={1280}
-        height={512}
+        height={768}
         className={`object-cover rounded-[32px] snap-center`}
         priority
         quality={100}

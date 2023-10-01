@@ -15,7 +15,7 @@ type Props = {
   slides: Slide[]
 }
 
-export const Carousel_half = ({ slides }: Props) => {
+export const Swiper_half = ({ slides }: Props) => {
   const swiperRef = useRef<SwiperCore>();
   const [currentIndex, setCurrentIndex] = useState(1)
 
@@ -23,8 +23,18 @@ export const Carousel_half = ({ slides }: Props) => {
     <section className="relative mb-5">
       <Swiper
         centeredSlides={true}
-        spaceBetween={20}
-        slidesPerView={2}
+        spaceBetween={10}
+        slidesPerView={1.2}
+        breakpoints={{
+          900: {
+            slidesPerView: 1.5,
+            spaceBetween: 15
+          },
+          1200: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          }
+        }}
         allowTouchMove={false}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
