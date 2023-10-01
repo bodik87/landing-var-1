@@ -26,7 +26,7 @@ export const Swiper_products = ({ slides }: Props) => {
         slidesPerView={1.2}
         breakpoints={{
           480: {
-            slidesPerView: 1.8,
+            slidesPerView: 1.6,
             spaceBetween: 15,
             centeredSlides: false
           },
