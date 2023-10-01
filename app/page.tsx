@@ -5,6 +5,7 @@ import { Swiper_products } from "@/components/carousels/Swiper_products";
 import Article from "@/components/content/Article";
 import ImageSection from "@/components/content/ImageSection";
 import ZoomImage from "@/components/content/ZoomImage";
+import TabsElement from "@/components/ui/TabsElement";
 import { mainSliderSlides, products, secondarySliderSlides } from "@/data";
 
 export default function Home() {
@@ -24,6 +25,8 @@ export default function Home() {
       <ZoomImage />
 
       <Swiper_products slides={products} />
+
+      <TabsElement />
     </>
   )
 }
