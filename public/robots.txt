@@ -1,0 +1,13 @@
+User-agent: *
+
+Crawl-delay: 10
+
+User-agent: Googlebot
+Disallow:
+Crawl-delay: 10
+
+User-agent: Googlebot-image
+Disallow:
+Crawl-delay: 10
+
+Host: https://landingbo.vercel.app/
