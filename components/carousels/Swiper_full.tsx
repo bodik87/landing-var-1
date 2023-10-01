@@ -53,12 +53,14 @@ export const Swiper_full = ({ slides }: Props) => {
       </Swiper>
 
       <button
+        title="Control button"
         onClick={() => swiperRef.current?.slidePrev()}
         className="button_swiper_full left-10 rotate-180"
       >
         <Arrow />
       </button>
       <button
+        title="Control button"
         onClick={() => swiperRef.current?.slideNext()}
         className="button_swiper_full right-10"
       >

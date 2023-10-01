@@ -8,6 +8,7 @@ const ThemeToggle = () => {
 
   return (
     <button
+      title="Theme toggle"
       type="button"
       onClick={() => handleClick()}
       className="smallBtn"

@@ -48,8 +48,6 @@ export const Swiper_half = ({ slides }: Props) => {
               width={1280}
               height={512}
               className={`object-cover rounded-lg ${currentIndex - 1 === i ? "opacity-100" : "opacity-30"} transition-all`}
-              priority
-              quality={100}
             />
           </SwiperSlide>)}
       </Swiper>

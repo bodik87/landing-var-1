@@ -41,6 +41,7 @@ const Header = () => {
 
             <ThemeToggle />
             <button
+              title="Burger"
               onClick={() => setActive(!active)}
               className="md:hidden z-50"
             >

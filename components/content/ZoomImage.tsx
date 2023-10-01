@@ -22,6 +22,7 @@ const ZoomImage = () => {
           width={1280}
           height={768}
           className={`object-cover mx-auto`}
+          quality={75}
         />
       </motion.div>
     </div>
