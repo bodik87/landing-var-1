@@ -59,6 +59,7 @@ export const Swiper_half = ({ slides }: Props) => {
 
         <div className="flex space-x-4">
           <button
+            title="Control button"
             className={`${currentIndex === 1 && "opacity-50 cursor-default"} h-9 w-9 flex items-center justify-center rounded-full bg-[#4D4D4D] transition-all rotate-180`}
             onClick={() => {
               if (currentIndex > 1) {
@@ -69,6 +70,7 @@ export const Swiper_half = ({ slides }: Props) => {
           ><Arrow />
           </button>
           <button
+            title="Control button"
             className={`${currentIndex === slides.length && "opacity-50 cursor-default"} h-9 w-9 flex items-center justify-center rounded-full bg-[#4D4D4D] transition-all`}
             onClick={() => {
               if (currentIndex < slides.length) {

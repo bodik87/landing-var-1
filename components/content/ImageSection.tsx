@@ -7,7 +7,7 @@ const ImageSection = () => {
   <section className="dark:bg-[#313131]">
    <article className='wrapper'>
     <div className="">
-     <h2 className="opacity-40">
+     <h2 className="opacity-60">
       Фото
      </h2>
      <div className="mt-2 w-full flex gap-5 overflow-x-scroll snap-x snap-mandatory rounded-[32px] scroll_horisontal pb-4">

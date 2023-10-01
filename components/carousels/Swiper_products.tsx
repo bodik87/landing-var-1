@@ -69,11 +69,13 @@ export const Swiper_products = ({ slides }: Props) => {
 
         <div className="flex space-x-4">
           <button
+            title="Control button"
             className={`h-9 w-9 flex items-center justify-center rounded-full bg-[#4D4D4D] transition-all rotate-180`}
             onClick={() => swiperRef.current?.slidePrev()}
           ><Arrow />
           </button>
           <button
+            title="Control button"
             className={`h-9 w-9 flex items-center justify-center rounded-full bg-[#4D4D4D] transition-all`}
             onClick={() => swiperRef.current?.slideNext()}
           ><Arrow />

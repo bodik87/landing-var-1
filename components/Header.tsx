@@ -34,8 +34,7 @@ const Header = () => {
 
           <nav className="space-x-4 md:space-x-6 flex items-center">
             <a href="tel:+380660984114">
-              <span className="hidden sm:block">Телефон</span>
-              <span className="sm:hidden"><PhoneIcon /></span>
+              <span className="block">Телефон</span>
             </a>
             <Link href={`/information`}>Інфо</Link>
 
