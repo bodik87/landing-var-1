@@ -11,8 +11,21 @@ import { Providers } from '@/components/ui/Providers';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Лендінг',
-  description: 'Лендінг',
+  title: 'Лендінг Шуліка Богдан',
+  description: 'Лендінг Шуліка Богдан',
+  keywords: [
+    "Створення сайтів",
+    "Створити сайт",
+    "Создание сайтов",
+    "Создание сайта",
+    "Написать сайт",
+    "Шулика Богдан",
+    "Заправить кондиционер Вишневое",
+    "заправити кондиціонер авто ціна",
+    "Заправка автокондиционера в Киеве",
+    "Заправка автокондиціонера в Києві",
+    "Шуліка Богдан",
+  ],
 }
 
 export default function RootLayout({
