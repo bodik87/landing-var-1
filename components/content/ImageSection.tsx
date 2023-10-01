@@ -20,7 +20,6 @@ const ImageSection = () => {
         height={768}
         className={`object-cover rounded-[32px] snap-center`}
         quality={75}
-        priority
        />
       ))}
      </div>
