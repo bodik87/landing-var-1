@@ -12,20 +12,11 @@ export default function Home() {
   return (
     <>
       <Swiper_full slides={mainSliderSlides} />
-
       <ImageSection />
-
-
-      <Section>
-        <Article />
-      </Section >
-
+      <Section><Article /></Section >
       <Swiper_half slides={secondarySliderSlides} />
-
       <ZoomImage />
-
       <Swiper_products slides={products} />
-
       <TabsElement />
     </>
   )
