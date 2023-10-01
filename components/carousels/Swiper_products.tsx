@@ -19,18 +19,23 @@ type Props = {
 export const Swiper_products = ({ slides }: Props) => {
   const swiperRef = useRef<SwiperCore>();
   return (
-    <section className="relative mb-5 max-w-7xl w-full mx-auto pl-3 sm:pl-6">
+    <section className="mb-5 wrapper">
       <Swiper
         centeredSlides={true}
         spaceBetween={10}
         slidesPerView={1.2}
         breakpoints={{
-          360: {
+          480: {
+            slidesPerView: 1.8,
+            spaceBetween: 15,
+            centeredSlides: false
+          },
+          768: {
             slidesPerView: 2.5,
             spaceBetween: 15,
             centeredSlides: false
           },
-          800: {
+          1200: {
             slidesPerView: 3.5,
             spaceBetween: 20,
             centeredSlides: false
@@ -42,13 +47,13 @@ export const Swiper_products = ({ slides }: Props) => {
       >
         {slides.map((item) =>
           <SwiperSlide key={item.id}>
-            <div className="flex flex-col cursor-pointer">
+            <div className="flex flex-col cursor-pointer bg-white text-black p-5 rounded-2xl">
               <Image
                 src={item.image}
                 alt={item.title}
-                width={300}
-                height={200}
-                className={`object-cover`}
+                width={240}
+                height={240}
+                className={`object-cover mx-auto`}
                 priority
                 quality={100}
               />
