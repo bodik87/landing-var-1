@@ -65,3 +65,7 @@ body {
 .text-accent {
   @apply dark:text-white text-black;
 }
+
+.button_swiper_full {
+  @apply hidden sm:flex absolute top-1/2 -translate-y-1/2 w-9 h-9 rounded-full overflow-hidden bg-white/20 z-10 items-center justify-center hover:scale-105 transition-all;
+}
