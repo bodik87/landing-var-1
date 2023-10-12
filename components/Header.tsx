@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import ThemeToggle from "./ui/ThemeToggle";
+import LanguageToogle from "./ui/LanguageToogle";
 
 const Header = () => {
   const [scrollUp, setScrollUp] = useState(true);
@@ -32,11 +33,12 @@ const Header = () => {
         <section className="wrapper flex justify-between items-center text-[min(4vw,20px)]">
           <Link href="/" className="inline-flex gap-2 items-center"><Logo /> Назва</Link>
 
-          <nav className="space-x-4 md:space-x-6 flex items-center">
+          <nav className="space-x-2 md:space-x-6 flex items-center">
             <a href="tel:+380660984114">
               <span className="block">Телефон</span>
             </a>
             <Link href={`/information`}>Інфо</Link>
+            <LanguageToogle />
 
             <ThemeToggle />
             <button
@@ -62,16 +64,7 @@ const Header = () => {
           </button>
 
           <nav className="flex flex-col items-end px-8 pt-[120px] gap-14 font-bold text-[20px]">
-            <Link onClick={() => setActive(false)} href="#about">
-              Продукція
-            </Link>
-            <Link onClick={() => setActive(false)} href="#">
-              Де купити
-            </Link>
-            <Link onClick={() => setActive(false)} href="#">
-              Про бренд
-            </Link>
-            <Link onClick={() => setActive(false)} href="#">
+            <Link onClick={() => setActive(false)} href="#footer">
               Контакти
             </Link>
           </nav>

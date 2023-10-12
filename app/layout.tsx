@@ -6,7 +6,7 @@ import Hydration from '@/components/ui/Hydration';
 import ProgressScroll from '@/components/ui/ProgressScroll';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-// import { Providers } from '@/components/ui/Providers';
+import { LangContextProvider } from '@/context/LangContext';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,25 +28,21 @@ export const metadata: Metadata = {
   ],
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className='!scroll-smooth'>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <Hydration>
-          {/* <Providers> */}
-          <ButtonUp />
-          <ProgressScroll />
-          <Header />
-          <main>
-            {children}
-          </main>
-          <Footer />
-          {/* </Providers> */}
-        </Hydration>
+        <LangContextProvider>
+          <Hydration>
+            <ButtonUp />
+            <ProgressScroll />
+            <Header />
+            <main>
+              {children}
+            </main>
+            <Footer />
+          </Hydration>
+        </LangContextProvider>
       </body>
     </html>
   )
