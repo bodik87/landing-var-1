@@ -23,7 +23,7 @@ export const Swiper_products = ({ slides }: Props) => {
       <Swiper
         centeredSlides={true}
         spaceBetween={10}
-        slidesPerView={1.2}
+        slidesPerView={1.4}
         breakpoints={{
           480: {
             slidesPerView: 1.6,
