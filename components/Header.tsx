@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useMotionValueEvent, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import ThemeToggle from "./ui/ThemeToggle";
 import LanguageToogle from "./ui/LanguageToogle";
 
@@ -51,25 +51,30 @@ const Header = () => {
           </nav>
         </section>
       </header>
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: '0' }}
+            exit={{ x: '100%' }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            onClick={() => setActive(false)}
+            className="md:hidden bg-white dark:bg-black fixed inset-0 z-40">
+            <button
+              onClick={() => setActive(!active)}
+              className="w-9 h-9 p-2 fixed top-5 right-6 rounded-full overflow-hidden bg-black/20 dark:bg-white/20 items-center justify-center"
+            >
+              <Close />
+            </button>
 
-      {active && (
-        <div
-          onClick={() => setActive(false)}
-          className="md:hidden bg-white dark:bg-black fixed inset-0 z-40">
-          <button
-            onClick={() => setActive(!active)}
-            className="w-9 h-9 p-2 fixed top-5 right-6 rounded-full overflow-hidden bg-black/20 dark:bg-white/20 items-center justify-center"
-          >
-            <Close />
-          </button>
-
-          <nav className="flex flex-col items-end px-8 pt-[120px] gap-14 font-bold text-[20px]">
-            <Link onClick={() => setActive(false)} href="#footer">
-              Контакти
-            </Link>
-          </nav>
-        </div>
-      )}
+            <nav className="flex flex-col items-end px-8 pt-[120px] gap-14 font-bold text-[20px]">
+              <Link onClick={() => setActive(false)} href="#footer">
+                Контакти
+              </Link>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }

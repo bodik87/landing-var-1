@@ -9,30 +9,28 @@ type Props = {
 
 const Modal = ({ children, modal, setModal }: Props) => {
   return (
-    <>
-      <AnimatePresence>
-        {modal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            onClick={() => setModal(false)}
-            className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-3xl z-50"
-          >
-            <div onClick={(e) => e.stopPropagation()} className="max-h-[500px] flex flex-col items-center overflow-y-auto scroll_categories p-5 max-w-xs w-full bg-white dark:bg-white/20 rounded-xl overflow-hidden shadow-2xl z-30">
-              <button
-                onClick={() => setModal(false)}
-                className="ml-auto w-9 h-9 p-2 rounded-full overflow-hidden bg-black/20 dark:bg-white/20 items-center justify-center"
-              ><Close />
-              </button>
+    <AnimatePresence>
+      {modal && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+          onClick={() => setModal(false)}
+          className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-3xl z-50"
+        >
+          <div onClick={(e) => e.stopPropagation()} className="max-h-[500px] flex flex-col items-center overflow-y-auto scroll_categories p-5 max-w-xs w-full bg-white dark:bg-white/20 rounded-xl overflow-hidden shadow-2xl z-30">
+            <button
+              onClick={() => setModal(false)}
+              className="ml-auto w-9 h-9 p-2 rounded-full overflow-hidden bg-black/20 dark:bg-white/20 items-center justify-center"
+            ><Close />
+            </button>
 
-              {children}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            {children}
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
 
